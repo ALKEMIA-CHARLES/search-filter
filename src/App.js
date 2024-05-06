@@ -3,7 +3,7 @@ import { flushSync } from "react-dom";
 
 function App() {
   const [items, setItems] = useState([])
-  // const [filteredItems, setFilteredItems] = useState([])
+
   const [query, SetQuery] = useState("")
   const inputRef = useRef()
   
@@ -22,17 +22,11 @@ function App() {
     setItems(prev => {
     return [...prev, value]
     })
-    // setFilteredItems(prev => {
-    //   return [...prev, value]
-    // })
+  
     inputRef.current.value = ""
   }
   
-  // function onChange(e) {
-  //   const value = e.target.value
-  //   setFilteredItems(items.filter(item => item.toLowerCase().includes(value.toLowerCase()))
-  //   )
-  // }
+
   
   return (
     <>
